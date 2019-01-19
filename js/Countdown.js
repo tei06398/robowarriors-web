@@ -1,6 +1,6 @@
 // JavaScript Document
 //var liveScoring = ""; //If Live Scores do not Exist
-var liveScoring = "https://ftcscores.com/event/YVi2mSon" //If live scores Exist
+var liveScoring = "https://ftcscores.com/event/YVi2mSon"; //If live scores Exist
 // Date set
 var countDownDate = new Date("Jan 19, 2019 07:30:00").getTime();
 
