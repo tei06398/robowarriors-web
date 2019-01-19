@@ -29,7 +29,7 @@ var x = setInterval(function() {
     if (liveScoring == "") {
 		document.getElementById("time").innerHTML = "Competition Time!";
 	} else {
-		document.getElementById("time").innerHTML = "<a href=\"" + liveScoring + "\">Live Scores</a>";
+		document.getElementById("time").innerHTML = "<a style=\"color: white;\" href=\"" + liveScoring + "\">Live Scores</a>";
 	}
   }
 }, 1000);
