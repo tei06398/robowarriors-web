@@ -1,6 +1,6 @@
 // JavaScript Document
 // Date set
-var countDownDate = new Date("Jan 19, 2019 07:30:00").getTime();
+var countDownDate = new Date("Feb 10, 2019 07:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
