@@ -1,4 +1,6 @@
 // JavaScript Document
+//var liveScoring = ""; //If Live Scores do not Exist
+var liveScoring = "https://ftcscores.com/event/YVi2mSon"; //If live scores Exist
 // Date set
 var countDownDate = new Date("Feb 10, 2019 07:30:00").getTime();
 
@@ -24,6 +26,10 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("time").innerHTML = "Competition Time!";
+    if (liveScoring == "") {
+		document.getElementById("time").innerHTML = "Competition Time!";
+	} else {
+		document.getElementById("time").innerHTML = "<a style=\"color: white;\" href=\"" + liveScoring + "\">Live Scores</a>";
+	}
   }
 }, 1000);
