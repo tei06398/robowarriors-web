@@ -75,10 +75,12 @@
 				</div>
 			</div>
 		</header>
-<center><img src="../img/Logo.png"></center>
 		<section id="links" class="bg-light-gray">
 			<div class="container">
-            <center>
+<div class="row">
+<div class="col s12 m12 l12 xl12">
+<center>
+		<center><img class="img-responsive" src="../img/Logo.png"></center>
 &nbsp; Our robot is divided into three basic components: the chassis, the mineral sweeper and the pivot arm. We begin the autonomous period latched to the lander. To land, the robot uses a hook attached to the pivot arm. A winch then lowers the robot to the ground. The pivot arm then slides out of the lander hook and can complete its autonomous tasks. <br>
 &nbsp; For the tele-op period, the robot has a mineral sweeper that extends two feet out into the crater. This uses a brush which spins and extends outwards to collect balls and blocks into a holding area. When the robot has collected 2 minerals, the drivers will retract the mineral sweeper. From here, the mineral sweeper is rotated back, sliding the minerals into the pivot arm head. The pivot arm then rotates up and drops the minerals back into the lander. 
  <br>
@@ -97,7 +99,7 @@
 &nbsp;Working with OpenCV (a library of programming functions mainly aimed at real-time computer vision), we developed a way to detect the relative positions of the three minerals to knock over. Then, we spent a bit attempting to use OpenCV to figure out how to differentiate between the white spheres and yellow cubes. 
 <br>
 &nbsp; Our first issue when implementing OpenCV was the color detection, our camera was outputting images in RGB, but the problem with that was that the Red Green Blue colorspace was very poor in its ability to differentiate the different colors. The solution was to use the Hue Saturation Value colorspace, otherwise known as HSV, when applying an HSV filter to get our desired values it output a black and white image in our code, where our desired color was the white. Using that black and white image we were able to find the contours and detect its shape. If the shape was spherical we knew it was the white mineral, else it was the cube, by also using the shape we double checked our color detection. Using OpenCV was an interesting challenge for using this year, figuring out this technology is really going to help us at later competitions and future seasons.<br>
-<img src="../img/mineral-sensor.PNG">
+<img class="img-responsive" src="../img/mineral-sensor.PNG">
 <br>
 <br>
 <br>
@@ -112,7 +114,7 @@
 &nbsp; Our tele-op team began by copying everything over from last year’s programming. With a nontrivial amount of deliberation, we figured out what everything was supposed to do. Then, we started trying to control the new motors specific to this year’s competition; the winch and winch-locking mechanism for lifting and landing, the two arms for manipulating the minerals, and so forth.
 The Pivot Arm was one of our main focuses when we began to work on TeleOp, we had to get the arm to stay in a position using a PID system. Unfortunately, when we tried to use the default FTC system our arm oscillated violently, we attempted to figure how to adjust our values. Through thorough testing, we were able to find our values and input them into the PID system. Unfortunately, when we adjusted the PID values it caused new problems. Luck for us, when we attempted the default values, it finally worked.
 TeleOp was programmed with the comfort and convenience of our driver and gunner at mind. We implemented several functions at their request. Our driver was having difficulty controlling the robot backwards, so we added a button to our gamepad that switched the front and back of the robot wheels.<br>
-<img src="../img/teleopflowchart.png">
+<img class="img-responsive" src="../img/teleopflowchart.png">
 <br>
 <br>
 <br>
@@ -154,9 +156,15 @@ Because of this we implemented another solution; we decided to add a metal lip t
 <br>
 <br>
 <br>			</center>
+</div>				
+</div>
+            
         </div>
 		</section>
-		<section id="contact">
+		
+
+		<footer>
+			<section id="contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
@@ -168,8 +176,6 @@ Because of this we implemented another solution; we decided to add a metal lip t
 				</div>
 			</div>
 		</section>
-
-		<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
